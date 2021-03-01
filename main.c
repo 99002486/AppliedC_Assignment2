@@ -5,8 +5,8 @@ int main()
 {
     int current_input;
     enum transition current_transition;
-    int (*switch_state_func[])(int)={stop, play, pause, rewind_song, 
-                                        fast_forward_song};
+    current_state_global = STOPPED;
+    int (*switch_state_func[])(int)={stop, play, pause, rewind_song, fast_forward_song};
     while(1){
         printf("Enter appropriate number for control \n 0 = Stop \n 1 = Play \n 2 = Pause \n 3 = Rewind \n 4 = Fast forward \n");
         scanf("%d",&current_input);

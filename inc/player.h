@@ -9,12 +9,14 @@ enum state{STOPPED,PLAYING,PAUSED};
 /**
  * Enum for each transition the player can take
  */
-enum transition{STOP,PLAY,PAUSE};
+enum transition{STOP,PLAY,PAUSE,REWIND,FASTFORWARD};
 /**
  * Initialize global variable to hold state of the player
  * The default current state as STOPPED
  */
-enum state current_state_global = STOPPED;
+enum state current_state_global;
+
+
 /**
  * @function-To transition from current state to PLAYING
  * @param-current state of the player
